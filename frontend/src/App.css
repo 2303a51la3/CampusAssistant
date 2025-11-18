@@ -1,0 +1,297 @@
+/* ========= GLOBAL LAYOUT ========= */
+
+.sru-app {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #e5edf7; /* light blue background */
+  color: #111827;
+}
+
+/* ========= HEADER ========= */
+
+.sru-header {
+  height: 72px;
+  background: #104a93; /* SRU blue bar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  color: #ffffff;
+}
+
+.sru-header-left {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.sru-logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+.sru-header-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.sru-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sru-nav-btn {
+  padding: 7px 24px;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sru-nav-btn-active {
+  background: #ffffff;
+  color: #104a93;
+}
+
+/* ========= MAIN AREA ========= */
+
+.sru-main {
+  flex: 1;
+  padding: 32px 0 40px;
+}
+
+.student-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ========= HERO CARD (CENTER BIG CARD) ========= */
+
+.hero-card {
+  max-width: 980px;
+  margin: 0 auto;       /* CENTER the card */
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
+  padding: 32px 40px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  column-gap: 40px;
+}
+
+/* ========= LEFT PANEL INSIDE HERO ========= */
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #104a93; /* Blue title like your earlier design */
+  margin: 0 0 12px;
+}
+
+.hero-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  max-width: 520px;
+  margin-bottom: 14px;
+}
+
+.hero-list {
+  padding-left: 18px;
+  margin: 0 0 18px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.hero-list li + li {
+  margin-top: 4px;
+}
+
+/* ========= QUICK ACCESS CARDS INSIDE HERO LEFT ========= */
+
+.quick-cards {
+  margin-top: 12px;
+}
+
+.quick-cards-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Matches class name used in App.js: quick-cards-grid */
+.quick-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 430px;
+}
+
+.quick-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+  text-align: left;
+  transition: box-shadow 0.15s ease, transform 0.15s ease,
+    background 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.quick-card:hover {
+  background: #ffffff;
+  border-color: #cbd5f5;
+  box-shadow: 0 10px 25px rgba(148, 163, 184, 0.35);
+  transform: translateY(-1px);
+}
+
+.quick-card-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #e0ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #0b5ec9;
+  flex-shrink: 0;
+}
+
+.quick-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-card-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.quick-card-sub {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.hero-note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #6b7280;
+  max-width: 520px;
+}
+
+/* ========= MIDDLE RECTANGLE (SRAaP INTEGRATION) ========= */
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right-inner {
+  width: 100%;
+  max-width: 320px;
+  height: 360px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 0 0, #e5edff, #f8fafc 55%, #e0ebff 100%);
+  box-shadow: inset 0 0 0 2px rgba(199, 210, 254, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.hero-right-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #104a93;
+  margin-bottom: 8px;
+}
+
+.hero-right-subtitle {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+/* ========= ADMIN WRAPPER ========= */
+
+.admin-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+}
+
+/* ========= FOOTER ========= */
+
+.sru-footer {
+  background: #104a93; /* same blue strip bottom */
+  color: #e5e7eb;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width: 1100px) {
+  .hero-card {
+    margin: 16px auto;
+    max-width: 900px;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 20px;
+  }
+
+  .hero-right-inner {
+    margin: 0 auto;
+  }
+
+  .quick-cards-grid {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .sru-header {
+    padding: 0 16px;
+  }
+
+  .hero-card {
+    padding: 20px 18px;
+  }
+}

@@ -1,0 +1,529 @@
+/* Whole admin area (inside the blue SRU shell) */
+
+.admin-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 0 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+}
+
+.admin-page h1 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ========== Analytics stats row ========== */
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 160px;
+  background: linear-gradient(135deg, #0b4aa2, #2563eb);
+  border-radius: 14px;
+  padding: 10px 14px;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.4);
+}
+
+.stat-card.wide {
+  flex: 2;
+  min-width: 260px;
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.stat-value-sm {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stat-sub {
+  margin-top: 2px;
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+/* Two-column layout */
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Cards – light SRU style */
+
+.admin-form-card,
+.admin-list-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 12px 26px rgba(148, 163, 184, 0.45);
+  border: 1px solid #e5e7eb;
+}
+
+.admin-form-card h2,
+.admin-list-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-form-card h2::before {
+  content: "✏️";
+  font-size: 18px;
+}
+
+.admin-list-card h2::before {
+  content: "📄";
+  font-size: 18px;
+}
+/* ========== Form styling ========== */
+
+.admin-form-card form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.admin-form-card textarea,
+.admin-form-card input,
+.admin-form-card select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  resize: vertical;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-form-card textarea:focus,
+.admin-form-card input:focus,
+.admin-form-card select:focus {
+  border-color: #1b4f9c;
+  box-shadow: 0 0 0 1px rgba(27, 79, 156, 0.3);
+  background: #ffffff;
+}
+
+/* Form buttons */
+
+.admin-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.admin-buttons button {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.admin-buttons button:first-child {
+  background: #1b4f9c;
+  color: #ffffff;
+}
+
+.admin-buttons button:nth-child(2) {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ========== FAQ table ========== */
+
+.admin-list-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-list-card thead {
+  background: #1b4f9c;
+  color: #ffffff;
+}
+
+.admin-list-card th,
+.admin-list-card td {
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-list-card th {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-list-card tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Tags */
+
+.admin-list-card td:nth-child(2) {
+  font-size: 12px;
+  color: #1b4f9c;
+}
+
+/* Action buttons */
+
+.admin-list-card button {
+  margin-right: 6px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.admin-list-card button:first-child {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.admin-list-card button:nth-child(2) {
+  background: #ef4444;
+  color: #ffffff;
+}
+/* Note */
+.admin-note {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #6b7280;
+}
+/* ================= CHAT HISTORY SECTION ================= */
+
+.history-card {
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 20px rgba(148, 163, 184, 0.3);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.history-refresh {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #1b4f9c;
+  border: none;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.history-refresh:hover {
+  background: #163f7e;
+}
+
+/* Table layout */
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: white;
+}
+
+.history-table thead {
+  background: #1b4f9c;
+  color: white;
+}
+
+.history-table th,
+.history-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.history-table th {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.history-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.history-table tbody tr:hover {
+  background: #eef2ff;
+  cursor: pointer;
+}
+
+/* Dept / Year column */
+.history-table td:nth-child(2) {
+  color: #1b4f9c;
+  font-weight: 500;
+}
+
+/* Responsive fix */
+@media (max-width: 900px) {
+  .history-table {
+    font-size: 12px;
+  }
+  .history-header h2 {
+    font-size: 17px;
+  }
+/* ===== History filters & extras ===== */
+
+.history-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.history-search {
+  flex: 1.4;
+  min-width: 180px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.history-filters select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+  background: #f9fafb;
+}
+
+.history-date-range {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.history-date-range label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-date-range input[type="date"] {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+}
+
+.history-export {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #047857;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.history-export:hover {
+  background: #065f46;
+}
+
+/* Pagination */
+
+.history-pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.history-pagination-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.history-pagination-buttons button {
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.history-pagination-buttons button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px) {
+  .history-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .history-date-range {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .history-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+/* ================= DARK MODE – ADMIN ================= */
+
+body.dark-mode .admin-page {
+  color: #e5e7eb;
+}
+
+body.dark-mode .admin-form-card,
+body.dark-mode .admin-list-card,
+body.dark-mode .history-card {
+  background: #020617;
+  border-color: #1f2937;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.8);
+}
+
+body.dark-mode .admin-form-card h2,
+body.dark-mode .admin-list-card h2,
+body.dark-mode .history-header h2 {
+  color: #e5e7eb;
+}
+
+body.dark-mode .admin-form-card textarea,
+body.dark-mode .admin-form-card input,
+body.dark-mode .admin-form-card select {
+  background: #020617;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+body.dark-mode .admin-form-card textarea:focus,
+body.dark-mode .admin-form-card input:focus,
+body.dark-mode .admin-form-card select:focus {
+  background: #020617;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
+}
+
+/* FAQ & history tables */
+
+body.dark-mode .admin-list-card thead,
+body.dark-mode .history-table thead {
+  background: #0b4aa2; /* keep SRU blue */
+}
+
+body.dark-mode .admin-list-card tbody tr:nth-child(even),
+body.dark-mode .history-table tbody tr:nth-child(even) {
+  background: #020617;
+}
+
+body.dark-mode .admin-list-card tbody tr:nth-child(odd),
+body.dark-mode .history-table tbody tr:nth-child(odd) {
+  background: #020617;
+}
+
+body.dark-mode .admin-list-card td,
+body.dark-mode .history-table td {
+  border-color: #111827;
+  color: #e5e7eb;
+}
+
+body.dark-mode .history-table tbody tr:hover {
+  background: #111827;
+}
+
+/* Stats cards – darker, still blue gradient */
+
+body.dark-mode .stat-card {
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.8);
+}
+
+/* Filters, search, pagination */
+
+body.dark-mode .history-search,
+body.dark-mode .history-filters select,
+body.dark-mode .history-date-range input[type="date"] {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+body.dark-mode .history-export {
+  background: #10b981;
+}
+
+body.dark-mode .history-pagination {
+  color: #9ca3af;
+}
+
+body.dark-mode .history-pagination-buttons button {
+  background: #020617;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+
+}
